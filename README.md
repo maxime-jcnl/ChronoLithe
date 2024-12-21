@@ -1,4 +1,4 @@
-# ChronoLith.fr
+# Chronolith.fr
 ## Idée:
 - Mettre en avant le coté français et fait main
 - Mettre en avant le coté limité/numéroté de chaque pièce
