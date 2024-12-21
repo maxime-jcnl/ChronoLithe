@@ -4,12 +4,14 @@
 
 body {
     font-family: 'Raleway', sans-serif;
+    margin: 0; /* Supprime les marges par défaut */
+    padding: 0;
+    box-sizing: border-box; /* Assure un bon calcul des dimensions */
 }
 
 .navbar {
     background-color: #f8f9fa;
     padding: 15px 0;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -41,4 +43,87 @@ body {
 
 .navbar li:hover {
     color: #007BFF;
+}
+
+
+/* Carousel styles */
+.carousel {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  margin: 0; /* Supprime les marges autour du carrousel */
+}
+
+.carousel-images {
+  position: relative; /* Nécessaire pour gérer les images superposées */
+  width: 100%;
+  height: 400px;
+  overflow: hidden; /* Cache les parties des images qui dépassent */
+  margin: 0; /* Assure que les images occupent toute la largeur */
+}
+
+
+.carousel-image {
+  width: 100%; /* Chaque image occupe toute la largeur du conteneur */
+  height: 400px; /* Hauteur fixe pour uniformiser les images */
+  object-fit: cover; /* Les images remplissent le conteneur sans déformation */
+  position: absolute; /* Toutes les images sont superposées */
+  top: 0;
+  left: 0;
+  opacity: 0; /* Toutes les images sont cachées par défaut */
+  transition: opacity 0.5s ease-in-out; /* Transition fluide entre les images */
+}
+
+.carousel-image.active {
+  opacity: 1; /* Seule l'image active est visible */
+  z-index: 1; /* L'image active est au-dessus des autres */
+}
+
+
+.carousel-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: white;
+  padding: 15px;
+  font-size: 1.8em;
+  cursor: pointer;
+  z-index: 10;
+  transition: background 0.3s ease;
+}
+
+.carousel-button.left {
+  left: 20px;
+}
+
+.carousel-button.right {
+  right: 20px;
+}
+
+.carousel-dots {
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10; /* Place les dots au-dessus des images */
+}
+
+
+.dot {
+  height: 12px;
+  width: 12px;
+  margin: 0 8px;
+  background-color: #bbb;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.dot.active {
+  background-color: #333;
+  transform: scale(1.5); /* Effet de mise en avant pour le point actif */
 }

@@ -1,7 +1,14 @@
 import React from "react";
-import "./Style.css"; // Import du fichier CSS
+import "./Style.css";
+import Carousel from "./Carousel";
 
 const HomePage = () => {
+  const images = [
+    "/images/image1.jpg",
+    "/images/image2.jpg",
+    "/images/image3.jpg",
+  ];
+
   return (
     <div className="homepage">
       <nav className="navbar">
@@ -12,6 +19,7 @@ const HomePage = () => {
           <li>Contact</li>
         </ul>
       </nav>
+      <Carousel images={images} />
     </div>
   );
 };
