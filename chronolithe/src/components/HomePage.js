@@ -1,6 +1,7 @@
 import React from "react";
 import "./Style.css";
 import Carousel from "./Carousel";
+import Navbar from "./Navbar";
 
 const HomePage = () => {
   const images = [
@@ -11,14 +12,7 @@ const HomePage = () => {
 
   return (
     <div className="homepage">
-      <nav className="navbar">
-        <div className="brand">CHRONOLITHE.</div>
-        <ul>
-          <li>Shop</li>
-          <li>A Propos</li>
-          <li>Contact</li>
-        </ul>
-      </nav>
+      <Navbar />
       <Carousel images={images} />
     </div>
   );

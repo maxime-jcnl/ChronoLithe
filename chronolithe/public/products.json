@@ -1,0 +1,16 @@
+[
+    {
+      "id": 1,
+      "name": "Horloge Minimaliste A",
+      "price": 120.00,
+      "images": [
+        "/images/products/product1/image1.jpg",
+        "/images/products/product1/image2.jpg"
+      ],
+      "description": "Une horloge minimaliste inspirée du design scandinave. Fabriquée à la main avec des matériaux durables.",
+      "category": "Minimaliste",
+      "colors": ["#FFFFFF", "#000000", "#CCCCCC"],
+      "availability": "En stock"
+    }
+  ]
+  

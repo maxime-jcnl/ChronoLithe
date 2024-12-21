@@ -1,11 +1,21 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client'; 
-import HomePage from './components/HomePage';
-import './components/Style.css'; 
+import React from "react";
+import ReactDOM from "react-dom/client";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import HomePage from "./components/HomePage";
+import Shop from "./components/Shop";
+import AboutPage from "./components/AboutPage";
 
-const root = ReactDOM.createRoot(document.getElementById('root')); 
+import "./components/Style.css";
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-    <React.StrictMode>
-        <HomePage />
-    </React.StrictMode>
+  <React.StrictMode>
+    <Router>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/shop" element={<Shop />} />
+        <Route path="/about" element={<AboutPage />} />
+      </Routes>
+    </Router>
+  </React.StrictMode>
 );

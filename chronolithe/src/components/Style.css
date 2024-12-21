@@ -25,6 +25,11 @@ body {
     margin-bottom: 10px;
 }
 
+.navbar .brand a {
+    text-decoration: none;
+    color: inherit;
+}
+
 .navbar ul {
     list-style: none;
     display: flex;
@@ -34,19 +39,37 @@ body {
 }
 
 .navbar li {
+    position: relative; /* Nécessaire pour positionner la barre sous le lien */
     margin: 0 20px;
     font-size: 1.2em;
     color: #333;
-    cursor: pointer;
     font-weight: 100; 
 }
 
-.navbar li:hover {
-    color: #007BFF;
+.navbar li a {
+    text-decoration: none; /* Supprime le soulignement */
+    color: inherit; /* Garde la couleur définie dans li */
+    position: relative;
+    z-index: 1;
 }
 
+.navbar li::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -5px;
+    width: 0;
+    height: 2px;
+    background-color: #000000;
+    border-radius: 2px;
+    transition: width 0.3s ease, left 0.3s ease;
+}
 
-/* Carousel styles */
+.navbar li:hover::after {
+    width: 100%;
+    left: 0;
+}
+
 .carousel {
   position: relative;
   width: 100%;
@@ -61,7 +84,6 @@ body {
   overflow: hidden; /* Cache les parties des images qui dépassent */
   margin: 0; /* Assure que les images occupent toute la largeur */
 }
-
 
 .carousel-image {
   width: 100%; /* Chaque image occupe toute la largeur du conteneur */
@@ -78,7 +100,6 @@ body {
   opacity: 1; /* Seule l'image active est visible */
   z-index: 1; /* L'image active est au-dessus des autres */
 }
-
 
 .carousel-button {
   position: absolute;
@@ -111,7 +132,6 @@ body {
   align-items: center;
   z-index: 10; /* Place les dots au-dessus des images */
 }
-
 
 .dot {
   height: 12px;
