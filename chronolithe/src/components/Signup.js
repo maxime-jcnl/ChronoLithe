@@ -1,5 +1,8 @@
 import React, { useState } from "react";
 import api from "../api";
+import Navbar from "./Navbar";
+
+import "./Style.css";
 
 const SignupPage = () => {
   const [firstName, setFirstName] = useState("");
@@ -19,7 +22,9 @@ const SignupPage = () => {
   };
 
   return (
-    <div style={{ textAlign: "center", marginTop: "20px" }}>
+    <div>
+      <Navbar hideAuthIcon={true} /> 
+    <div className="auth-page" style={{ textAlign: "center", marginTop: "20px" }}>
       <h1>Créer un compte</h1>
       <form onSubmit={handleSignup} style={{ display: "inline-block", textAlign: "left" }}>
         <div>
@@ -60,6 +65,7 @@ const SignupPage = () => {
         </div>
         <button type="submit">Créer un compte</button>
       </form>
+    </div>
     </div>
   );
 };

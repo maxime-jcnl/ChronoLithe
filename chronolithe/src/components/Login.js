@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import api from "../api";
+import "./Style.css";
+import Navbar from "./Navbar";
 
 const LoginPage = () => {
   const [email, setEmail] = useState("");
@@ -18,7 +20,10 @@ const LoginPage = () => {
   };
 
   return (
-    <div style={{ textAlign: "center", marginTop: "20px" }}>
+    <div>
+      <Navbar hideAuthIcon={true} />
+    <div className="auth-page">
+     
       <h1>Se connecter</h1>
       <form onSubmit={handleLogin} style={{ display: "inline-block", textAlign: "left" }}>
         <div>
@@ -42,6 +47,7 @@ const LoginPage = () => {
         <button type="submit">Se connecter</button>
       </form>
     </div>
+     </div>
   );
 };
 
