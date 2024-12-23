@@ -6,6 +6,9 @@
 
 ---
 
+PENSER A CHANGER KEY JWT DANS .ENV
+
+
 ## **Structure du site :**
 
 ### **1. Page d’accueil**

@@ -1,6 +1,7 @@
 /* Police Raleway */
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Monoton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300&family=Monoton&family=Montserrat:wght@400;700&display=swap');
 
 body {
     font-family: 'Raleway', sans-serif;
@@ -148,21 +149,28 @@ body {
   transform: scale(1.5); /* Effet de mise en avant pour le point actif */
 }
 
+/* Structure de la grille */
 .products-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Colonnes adaptatives */
+  gap: 20px; /* Espacement entre les cartes */
   padding: 20px;
+  width: 100%;
 }
 
+/* Carte produit */
 .product-card {
   border: 1px solid #ddd;
   border-radius: 8px;
-  overflow: hidden;
   background-color: #fff;
-  text-align: center;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
 }
 
 .product-card:hover {
@@ -170,44 +178,100 @@ body {
   box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
 }
 
+/* Image produit */
 .product-image {
   width: 100%;
-  max-width: 200px; /* Limite la largeur de l'image */
-  height: auto;
-  object-fit: cover;
-  margin: 0 auto; /* Centre l'image dans la carte */
-}
-
-.product-name {
-  font-size: 1.2em;
-  margin: 10px 0;
-}
-
-.product-price {
-  color: #007BFF;
-  font-size: 1.1em;
+  max-width: 200px; /* Taille maximale de l'image */
+  height: 200px;
+  object-fit: cover; /* Ajuste l'image sans la déformer */
+  border-radius: 4px;
   margin-bottom: 10px;
 }
 
+/* Nom produit */
+.product-name {
+  font-size: 1.2em;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+/* Prix produit */
+.product-price {
+  font-size: 1em;
+  color: #007bff;
+  margin-bottom: 10px;
+}
+
+/* Couleurs disponibles */
 .product-colors {
   display: flex;
   justify-content: center;
   gap: 5px;
+  margin-top: 10px;
 }
 
 .color-square {
   width: 20px;
   height: 20px;
-  border: 2px solid black;
+  border: 2px solid #000;
+  background-color: transparent;
+  padding: 3px;
   box-sizing: border-box;
-  padding: 2px;
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
 }
 
 .color-square div {
   width: 100%;
   height: 100%;
+  border-radius: 2px;
   background-color: inherit;
+}
+
+.title-collection {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2em; /* Ajuste la taille selon tes préférences */
+  font-weight: 70; /* Utilise un poids bold pour plus de visibilité */
+  text-align: center;
+  margin-top: 20px;
+}
+/* Icône de connexion */
+.auth-icon {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  cursor: pointer;
+  z-index: 10; /* S'assure que l'icône est au-dessus des autres éléments */
+}
+
+.auth-icon-image {
+  width: 30px;
+  height: 30px;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 50px;
+  right: 20px;
+  background-color: #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  z-index: 20; /* Assure que le menu passe au-dessus du carrousel */
+}
+
+.dropdown-menu a {
+  text-decoration: none;
+  color: #333;
+  font-size: 0.9em;
+  padding: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.dropdown-menu a:hover {
+  background-color: #f2f2f2;
 }

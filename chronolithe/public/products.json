@@ -11,6 +11,86 @@
       "category": "Minimaliste",
       "colors": ["#FFFFFF", "#000000", "#CCCCCC"],
       "availability": "En stock"
+    },
+    {
+      "id": 2,
+      "name": "Horloge Moderne B",
+      "price": 150.00,
+      "images": [
+        "/images/products/product1/image1.jpg",
+        "/images/products/product1/image2.jpg"
+      ],
+      "description": "Une horloge au design moderne, idéale pour un intérieur contemporain. Fabriquée avec des matériaux recyclés.",
+      "category": "Moderne",
+      "colors": ["#FF5733", "#333333", "#F1C40F"],
+      "availability": "En stock"
+    },
+    {
+      "id": 3,
+      "name": "Horloge Édition Limitée C",
+      "price": 200.00,
+      "images": [
+        "/images/products/product1/image1.jpg",
+        "/images/products/product1/image2.jpg"
+      ],
+      "description": "Un modèle unique en édition limitée, combinant tradition artisanale et technologie moderne.",
+      "category": "Édition Limitée",
+      "colors": ["#8E44AD", "#3498DB", "#1ABC9C"],
+      "availability": "Épuisé"
+    },
+    {
+      "id": 4,
+      "name": "Horloge Vintage D",
+      "price": 180.00,
+      "images": [
+        "/images/products/product1/image1.jpg",
+        "/images/products/product1/image2.jpg"
+      ],
+      "description": "Un modèle vintage qui évoque le charme des anciennes horloges avec une touche de modernité.",
+      "category": "Vintage",
+      "colors": ["#8B4513", "#D2B48C", "#FFE4B5"],
+      "availability": "En stock"
+    },
+    {
+      "id": 5,
+      "name": "Horloge Futuriste E",
+      "price": 220.00,
+      "images": [
+        "/images/products/product1/image1.jpg",
+        "/images/products/product1/image2.jpg"
+      ],
+      "description": "Un design avant-gardiste pour une horloge qui s'intègre parfaitement dans les intérieurs ultra-modernes.",
+      "category": "Futuriste",
+      "colors": ["#2ECC71", "#E74C3C", "#34495E"],
+      "availability": "En stock"
+    },
+    {
+      "id": 6,
+      "name": "Horloge Naturelle F",
+      "price": 140.00,
+      "images": [
+        "/images/products/product1/image1.jpg",
+        "/images/products/product1/image2.jpg"
+      ],
+      "description": "Inspirée par la nature, cette horloge utilise des matériaux durables et des couleurs apaisantes.",
+      "category": "Naturelle",
+      "colors": ["#228B22", "#A0522D", "#F5F5DC"],
+      "availability": "En stock"
+    },
+    {
+      "id": 7,
+      "name": "Horloge Luxe G",
+      "price": 300.00,
+      "images": [
+        "/images/products/product1/image1.jpg",
+        "/images/products/product1/image2.jpg"
+      ],
+      "description": "Une horloge luxueuse avec des finitions dorées, idéale pour un intérieur élégant.",
+      "category": "Luxe",
+      "colors": ["#FFD700", "#C0C0C0", "#8C7853"],
+      "availability": "Épuisé"
     }
+    
+    
   ]
   
